@@ -93,11 +93,9 @@
           <text value="Nota:"/>
         </properties>
       </component>
-      <component id="87a6e" class="javax.swing.JTextField" binding="aluNota">
+      <component id="4cbc7" class="javax.swing.JSpinner" binding="aluNota" custom-create="true">
         <constraints>
-          <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="25" height="-1"/>
-          </grid>
+          <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
