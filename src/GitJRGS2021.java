@@ -18,7 +18,17 @@ public class GitJRGS2021 {
                 miAlumno.SetNombre(aluNombre.getText());
                 miAlumno.SetNota(Integer.parseInt(aluNota.getText()));
                 misAlumnos.Agregar(miAlumno);
-                listaAlumnos.append(aluNombre.getText()+" "+aluNota.getText()+ "\n");
+                String miLinea = aluNombre.getText();
+                if (miAlumno.GetNota() < 5)
+                    miLinea += " Suspenso";
+                else if (miAlumno.GetNota() < 7)
+                    miLinea += " Aprobado";
+                else if (miAlumno.GetNota() < 9)
+                    miLinea += " Notable";
+                else
+                    miLinea += " Sobresaliente";
+                miLinea += "\n";
+                listaAlumnos.append(miLinea);
             }
         });
     }
