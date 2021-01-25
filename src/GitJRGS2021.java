@@ -16,7 +16,7 @@ public class GitJRGS2021 {
             public void actionPerformed(ActionEvent e) {
                 Alumno miAlumno = new Alumno();
                 miAlumno.SetNombre(aluNombre.getText());
-                miAlumno.SetNota(Integer.parseInt(aluNota.getText()));
+                miAlumno.SetNota((Integer)aluNota.getValue());
                 misAlumnos.Agregar(miAlumno);
                 String miLinea = aluNombre.getText();
                 if (miAlumno.GetNota() < 5)
