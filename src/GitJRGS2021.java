@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 public class GitJRGS2021 {
     private JPanel GitPanelJRGS2021;
     private JTextField aluNombre;
-    private JTextField aluNota;
+    private JSpinner aluNota;
     private JButton agregarButton;
     private JTextArea listaAlumnos;
     private Alumnos misAlumnos = new Alumnos();
@@ -16,7 +16,7 @@ public class GitJRGS2021 {
             public void actionPerformed(ActionEvent e) {
                 Alumno miAlumno = new Alumno();
                 miAlumno.SetNombre(aluNombre.getText());
-                miAlumno.SetNota(Integer.parseInt(aluNota.getText()));
+                miAlumno.SetNota((Integer)aluNota.getValue());
                 misAlumnos.Agregar(miAlumno);
                 String miLinea = aluNombre.getText();
                 if (miAlumno.GetNota() < 5)
@@ -43,6 +43,8 @@ public class GitJRGS2021 {
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
+        aluNota = new JSpinner();
+        aluNota.setModel( new SpinnerNumberModel(5,0,10,1));
     }
 }
 
